@@ -5,6 +5,7 @@ import Services from './components/services';
 import CarDetails from './components/cardetails';
 import Footer from './components/footer';
 import ContactForm from './components/contact';
+import TranslationButton from './components/TranslationButton';
 function App() {
   return (
     <div className="App">
@@ -13,6 +14,7 @@ function App() {
       <CarDetails> </CarDetails>
       <ContactForm> </ContactForm>
       <Footer> </Footer>
+      <TranslationButton />
     </div>
   );
 }
