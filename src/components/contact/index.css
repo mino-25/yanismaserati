@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Latin:wght@100..800&display=swap');
+
+
+.contact_form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 9%;
+    gap: 5%;
+    color: white;
+    font-family: "Jost", sans-serif;
+
+}
+.contact_form form{
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form h2{
+    font-size: 2em;
+    font-weight: 600;
+    text-align: center  ;
+}
+
+.input-box{
+    margin-top: 3%;
+}
+.input-box label{
+    font-family: 'Jost', sans-serif;
+    font-size: 1em;
+}
+
+.input-box .field{
+    width: 90%;
+    height: 40px;
+
+    font-size: 1em;
+    font-family: 'Jost', sans-serif;
+    outline: none;
+
+    margin-top: 1.5%;
+    padding-left: 1%;
+
+    background-color: transparent;
+    color: white;
+    border: solid 1.5px #adadad ;
+    border-radius: 8px;
+}
+
+.input-box .field.mess{
+    height: 100px;
+    resize: none;
+    font-size: 14px;
+}
+
+form button{
+    width: 70%;
+    height: 40px;
+    margin-top: 1%;
+    align-self: center;
+
+    background-color:  #ffcf22;
+    color: white;
+    font-family: 'Jost', sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+
+    cursor: pointer;
+}
+form button:hover{
+    background-color:  #bcb174;
+}

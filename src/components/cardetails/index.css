@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Jost:ital,wght@0,100..900;1,100..900&family=Parisienne&family=Pinyon+Script&family=Roboto:ital,wght@0,100..900;1,100..900&family=Spectral+SC:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Tangerine:wght@400;700&display=swap');
+.car-detail{
+  margin-top: 100px;
+  color: white;
+}
+
+.car-detail h2{
+  text-align: center;
+  font-family: "Jost", sans-serif;
+  font-size: 2em;
+  font-weight: 500;
+  color: white;
+}
+.car-detail h4{
+  text-align: center;
+  font-family: "Jost", sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  color: white;
+  margin: 20px 0;
+}
+
+
+
+.car-detail img{
+  display: block;
+  width: 100%;
+    
+}
+
+.car-citation{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 20px;
+  padding: 5%;
+  background-color: rgb(17, 17, 17);
+
+  font-family: 'Pinyon Script', cursive;
+  text-align: center;
+}
+
+.embla {
+
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
+
+.car-stats{
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(16, 16, 16);
+}
+.car-stats h3{
+  font-family: "Jost", sans-serif;
+  font-size: 1.5em;
+  font-weight: 500;
+  color: white;
+  margin: 20px 0;
+}
+.car-stats ul li{
+  font-family: "Jost", sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  color: white;
+  margin: 5px 0;
+}
+
+@media screen and (min-width: 769px) {
+    .car-presentation{
+      margin-top: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+    .car-presentation img{
+      display: block;
+      width: 50%; 
+      height: auto;  
+    }
+    .car-citation{
+      font-size: 1.5em;
+    }
+    .car-detail h4{
+      font-size: 1.3em;
+      margin-right: 30px;
+    }
+
+}

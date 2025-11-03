@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Spectral+SC:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+.homepage-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #002462;
+    color: white;
+    font-family: "Cal Sans", sans-serif;
+}
+
+header {
+    position: fixed;
+    z-index: 2;
+}
+
+header nav {
+    margin-top: 5%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+header nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 10px 20px;
+    margin: 0;  
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+#nav-reservation {
+    background-color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: black;
+    font-weight: bold;
+}
+
+
+.logo {
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Jost', sans-serif;
+}
+.logo img {
+    width: 50%;
+}
+.logo h1{
+    font-size: 2.5em;
+    font-weight: 300;
+}
+.logo h2{
+    font-size: 1em;
+    font-weight: 300;
+}
+
+
+@media screen and (max-width: 768px) {
+    .homepage-container {
+        background-image: url('../assets/Pinned\ on\ Car.jpeg'); /* chemin vers l’image */
+        background-repeat: no-repeat; /* empêche la répétition */
+        background-position: center;  /* centre l’image */
+        background-size: cover;     /* ou cover selon le besoin */;
+    }
+    
+}
+
+@media screen and (min-width: 769px) {
+    .homepage-container {
+        background-image: url('../assets/homepagebannerpc.webp'); /* chemin vers l’image */
+        background-repeat: no-repeat; /* empêche la répétition */
+        background-position: center;  /* centre l’image */
+        background-size: cover;     /* ou cover selon le besoin */;
+    }
+
+    header nav ul {
+        gap: 40px;
+        padding: 10px 40px;
+    }
+    .nav-link {
+        font-size: 1.1em;
+    }
+    .logo h1{
+        font-size: 5em;
+        font-weight: 300;
+    }
+    .logo h2{
+        font-size: 2em;
+        font-weight: 300;
+    }
+
+}
+
+

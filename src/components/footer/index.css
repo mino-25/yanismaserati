@@ -1,0 +1,30 @@
+footer{
+    padding: 2%;
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Jost', sans-serif;
+}
+.contact{
+    align-self: self-start;
+}
+.nav-footer ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+}
+.nav-footer li {
+    font-weight: 500;
+}
+#copyright{
+    align-self: center;
+    margin-top: 20px;
+}
+footer a{
+    align-self: center;
+    text-decoration: none;
+    color: black;
+}
