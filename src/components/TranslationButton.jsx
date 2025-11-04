@@ -1,41 +1,52 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import frFlag from "./assets/flag-fr.webp";
+import ukFlag from "./assets/flag-uk.webp";
+import "./translation.css";
 
 export default function TranslationButton() {
   const [open, setOpen] = useState(false);
+  const [currentLang, setCurrentLang] = useState("fr");
+
+  useEffect(() => {
+    // Detect Google Translate language change
+    const observer = new MutationObserver(() => {
+      const frame = document.querySelector(".goog-te-banner-frame");
+      if (frame && frame.style.display === "none") {
+        const lang = document.documentElement.lang || "fr";
+        setCurrentLang(lang.startsWith("en") ? "en" : "fr");
+      }
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
+    return () => observer.disconnect();
+  }, []);
 
   const changeLang = (lang) => {
     const select = document.querySelector(".goog-te-combo");
     if (select) {
       select.value = lang;
       select.dispatchEvent(new Event("change"));
+      setCurrentLang(lang);
     }
     setOpen(false);
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
-      {/* Main button */}
-      <div
-        onClick={() => setOpen(!open)}
-        className="bg-white shadow-lg rounded-full p-2 cursor-pointer"
-      >
+    <div className="translate-container">
+      <div className="translate-button" onClick={() => setOpen(!open)}>
         <img
-          src={require("./assets/flag-fr.webp")}
-          alt="language"
-          className="w-8 h-8"
+          src={currentLang === "fr" ? frFlag : ukFlag}
+          alt="flag"
+          className="flag-icon"
         />
       </div>
 
-      {/* Popup with flags */}
       {open && (
-        <div className="absolute bottom-12 right-0 bg-white shadow-md rounded-lg p-2 flex flex-col gap-2">
-          <button onClick={() => changeLang("fr")} className="flex items-center gap-2">
-            <img src={require("./assets/flag-fr.webp")} alt="FR" className="w-6 h-6" />
-            <span>Français</span>
+        <div className="translate-popup">
+          <button onClick={() => changeLang("fr")}>
+            <img src={frFlag} alt="Français" className="flag-icon" />
           </button>
-          <button onClick={() => changeLang("en")} className="flex items-center gap-2">
-            <img src={require("./assets/flag-uk.webp")} alt="EN" className="w-6 h-6" />
-            <span>English</span>
+          <button onClick={() => changeLang("en")}>
+            <img src={ukFlag} alt="English" className="flag-icon" />
           </button>
         </div>
       )}
