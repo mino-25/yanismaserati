@@ -3,22 +3,9 @@ import frFlag from "./assets/flag-fr.webp";
 import ukFlag from "./assets/flag-uk.webp";
 import "./translation.css";
 
-export default function TranslationButton() {
+export default function TranslationButton({ onLangChange }) {
   const [open, setOpen] = useState(false);
   const [currentLang, setCurrentLang] = useState("fr");
-
-  useEffect(() => {
-    // Detect Google Translate language change
-    const observer = new MutationObserver(() => {
-      const frame = document.querySelector(".goog-te-banner-frame");
-      if (frame && frame.style.display === "none") {
-        const lang = document.documentElement.lang || "fr";
-        setCurrentLang(lang.startsWith("en") ? "en" : "fr");
-      }
-    });
-    observer.observe(document.body, { childList: true, subtree: true });
-    return () => observer.disconnect();
-  }, []);
 
   const changeLang = (lang) => {
     const select = document.querySelector(".goog-te-combo");
@@ -26,6 +13,7 @@ export default function TranslationButton() {
       select.value = lang;
       select.dispatchEvent(new Event("change"));
       setCurrentLang(lang);
+      onLangChange && onLangChange(lang); // 🔹 envoie la langue à App
     }
     setOpen(false);
   };

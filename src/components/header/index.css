@@ -1,0 +1,42 @@
+header {
+    position: fixed;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2%;
+    color: white;
+    font-family: "Cal Sans", sans-serif;
+}
+
+header nav {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+header nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 10px 20px;
+    margin: 0;  
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+#nav-reservation {
+    background-color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: black;
+}
