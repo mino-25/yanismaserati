@@ -37,6 +37,7 @@
 @media screen and (max-width: 768px) {
     .homepage-container {
         background-image: url('../assets/Pinned\ on\ Car.jpeg'); /* chemin vers l’image */
+        backdrop-filter: blur(0.5);
         background-repeat: no-repeat; /* empêche la répétition */
         background-position: center;  /* centre l’image */
         background-size: cover;     /* ou cover selon le besoin */;
@@ -46,11 +47,27 @@
 
 @media screen and (min-width: 769px) {
     .homepage-container {
-        background-image: url('../assets/homepagebannerpc.webp'); /* chemin vers l’image */
-        background-repeat: no-repeat; /* empêche la répétition */
-        background-position: center;  /* centre l’image */
-        background-size: cover;     /* ou cover selon le besoin */;
-    }
+    position: relative;
+    background-image: url('../assets/pc-cover-2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  /* Overlay */
+  .homepage-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5); /* Adjust opacity (0.3–0.7 typical) */
+    z-index: 0;
+  }
+
+  /* Make sure your content stays above the overlay */
+  .homepage-container > * {
+    position: relative;
+    z-index: 1;
+  }
 
     header nav ul {
         gap: 40px;

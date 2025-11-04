@@ -83,3 +83,12 @@ form button{
 form button:hover{
     background-color:  #bcb174;
 }
+
+@media screen and (min-width: 769px) {
+    .contact_form form{
+        padding: 5%;
+    }
+    .input-box .field{
+        width: 100%;
+    }
+}
