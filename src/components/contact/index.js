@@ -39,7 +39,7 @@ function ContactForm(){
 
                 <div className="input-box">
                     <label>Date :</label>
-                    <input type="date" name='Nom' className="field" placeholder="Date de l'évènement" required/>
+                    <input type="date" name='date' className="field" placeholder="Date de l'évènement" required/>
                 </div>
 
                 <div className="input-box">
