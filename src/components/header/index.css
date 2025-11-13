@@ -1,42 +1,70 @@
 header {
-    position: fixed;
-    z-index: 2;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 2%;
-    color: white;
-    font-family: "Cal Sans", sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  transition: all 0.4s ease;
+  z-index: 10;
+  font-family: "Cal Sans", sans-serif;
+  padding-top: 1rem;
 }
 
+/* --- Navigation box --- */
 header nav {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 20px;
-    border:1px solid rgba(255, 255, 255, 0.18);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  padding: 0.5rem 1.5rem;
+  transition: all 0.3s ease;
 }
+
+/* --- Nav links --- */
 header nav ul {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    padding: 10px 20px;
-    margin: 0;  
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-link {
-    text-decoration: none;
-    color: white;
-    border-radius: 10px;
-    transition: background-color 0.3s, color 0.3s;
-    cursor: pointer;
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 6px 10px;
+  border-radius: 8px;
 }
 
+/* --- Hover & active state --- */
+.nav-link:hover,
+.nav-link.active {
+  color: #ffd700; /* doré pour le côté prestige */
+}
+
+/* --- Soulignement doux au hover --- */
+
+
+
+/* --- CTA button --- */
 #nav-reservation {
-    background-color: #ffffff;
-    padding: 5px 10px;
-    border-radius: 10px;
-    color: black;
+  background: #ffffff;
+  color: #212121;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 8px 14px;
+  transition: all 0.3s ease;
+}
+
+#nav-reservation:hover {
+  background: #ffd700;
+  color: #212121;
+  transform: scale(1.05);
 }
